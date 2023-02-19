@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 
 class GlobalController extends GetxController {
   //create various variables here
-  RxBool _isLoading = true.obs;
+  final RxBool _isLoading = true.obs;
 
-  RxDouble _lattitude = 0.0.obs;
-  RxDouble _longitude = 0.0.obs;
+  final RxDouble _lattitude = 0.0.obs;
+  final RxDouble _longitude = 0.0.obs;
 
   @override
   void onInit() {
