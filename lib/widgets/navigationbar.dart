@@ -10,7 +10,6 @@ class CustomBottomNav extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Stack(
-      
       children: [
         CustomPaint(
           size: Size(size.width, 100),
@@ -20,7 +19,15 @@ class CustomBottomNav extends StatelessWidget {
           heightFactor: 1.4,
           child: FloatingActionButton(
             backgroundColor: Colors.white,
-            onPressed: () {},
+            onPressed: () {
+               ScaffoldMessenger.of(context).showSnackBar(
+
+                    const SnackBar(
+                      
+                      content: Text('Will be added soon!'),
+                    ),
+                  );
+            },
             shape: CircleBorder(
               side: BorderSide(
                 color: kPrimaryColor,
@@ -38,14 +45,30 @@ class CustomBottomNav extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                   ScaffoldMessenger.of(context).showSnackBar(
+
+                    const SnackBar(
+                      
+                      content: Text('Will be added soon!'),
+                    ),
+                  );
+                },
                 icon: Image.asset('assets/icons/Map.png'),
               ),
               SizedBox(
                 width: size.width * 0.40,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+
+                    const SnackBar(
+
+                      content: Text('Will be added soon!'),
+                    ),
+                  );
+                },
                 icon: Image.asset('assets/icons/List.png'),
               ),
             ],
