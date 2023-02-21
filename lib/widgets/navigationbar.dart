@@ -20,13 +20,11 @@ class CustomBottomNav extends StatelessWidget {
           child: FloatingActionButton(
             backgroundColor: Colors.white,
             onPressed: () {
-               ScaffoldMessenger.of(context).showSnackBar(
-
-                    const SnackBar(
-                      
-                      content: Text('Will be added soon!'),
-                    ),
-                  );
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Will be added soon!'),
+                ),
+              );
             },
             shape: CircleBorder(
               side: BorderSide(
@@ -46,10 +44,8 @@ class CustomBottomNav extends StatelessWidget {
             children: [
               IconButton(
                 onPressed: () {
-                   ScaffoldMessenger.of(context).showSnackBar(
-
+                  ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
-                      
                       content: Text('Will be added soon!'),
                     ),
                   );
@@ -62,9 +58,7 @@ class CustomBottomNav extends StatelessWidget {
               IconButton(
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(
-
                     const SnackBar(
-
                       content: Text('Will be added soon!'),
                     ),
                   );
@@ -254,7 +248,7 @@ class RPSCustomPainter extends CustomPainter {
     canvas.drawPath(path_1, paint1Stroke);
 
     Paint paint1Fill = Paint()..style = PaintingStyle.fill;
-    paint1Fill.color = const Color(0xff2f2f52).withOpacity(1.0);
+    paint1Fill.color = const Color(0xff18172b).withOpacity(1.0);
     canvas.drawPath(path_1, paint1Fill);
 
     Path path_2 = Path();
@@ -383,7 +377,7 @@ class RPSCustomPainter extends CustomPainter {
     canvas.drawPath(path_3, paint3Stroke);
 
     Paint paint3Fill = Paint()..style = PaintingStyle.fill;
-    paint3Fill.color = const Color(0xff292e56).withOpacity(1.0);
+    paint3Fill.color = const Color(0xff18172b).withOpacity(1.0);
     canvas.drawPath(path_3, paint3Fill);
   }
 

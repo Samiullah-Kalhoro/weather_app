@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+
 import 'package:weather_app/controller/global_controller.dart';
 
 import '../widgets/current_city_weather.dart';
 import '../widgets/navigationbar.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomeScreenState extends State<HomeScreen> {
   final GlobalController _globalController =
       Get.put(GlobalController(), permanent: true);
   @override
@@ -42,7 +43,10 @@ class _HomePageState extends State<HomePage> {
                 ? const Center(
                     child: CircularProgressIndicator(),
                   )
-                :  CurrentCityWeather(weatherDataCurrent: _globalController.getWeatherData().getCurrentWeather(),),
+                : CurrentCityWeather(
+                    weatherDataCurrent:
+                        _globalController.getWeatherData().getCurrentWeather(),
+                  ),
           ),
         ),
       ),
